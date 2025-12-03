@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const webhookStatus = document.getElementById('webhookStatus');
     
     // Webhook URL
-    const WEBHOOK_URL = 'https://n8n.nandorr.com/webhook-test/d35df237-9fb2-477b-a5c5-8ade3da6b46a';
+    const WEBHOOK_URL = 'https://n8n.nandorr.com/webhook/d35df237-9fb2-477b-a5c5-8ade3da6b46a';
     
     // Function to send data to webhook and get response
     async function getWebhookRecommendations(songTitle, artistName) {
