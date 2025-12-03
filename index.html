@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs Like X - Music Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-music"></i> Songs Like X</h1>
+            <p class="subtitle">Find songs similar to your favorite tracks</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <div class="form-container">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="songTitle"><i class="fas fa-headphones"></i> Song Title</label>
+                            <input type="text" id="songTitle" placeholder="Enter song title...">
+                        </div>
+                        <div class="form-group">
+                            <label for="artist"><i class="fas fa-user"></i> Artist</label>
+                            <input type="text" id="artist" placeholder="Enter artist name...">
+                        </div>
+                    </div>
+                    
+                    <button id="searchBtn" class="search-button">
+                        <i class="fas fa-search"></i> Find Similar Songs
+                    </button>
+                    
+                    <div class="form-footer">
+                        <p class="hint">Fill in both fields for best results, or just one for broader recommendations</p>
+                    </div>
+                </div>
+
+                <div class="examples">
+                    <p>Try these examples:</p>
+                    <div class="example-buttons">
+                        <button class="example-btn" data-song="Blinding Lights" data-artist="The Weeknd">
+                            <span class="song">Blinding Lights</span>
+                            <span class="artist">The Weeknd</span>
+                        </button>
+                        <button class="example-btn" data-song="Bad Guy" data-artist="Billie Eilish">
+                            <span class="song">Bad Guy</span>
+                            <span class="artist">Billie Eilish</span>
+                        </button>
+                        <button class="example-btn" data-song="Bohemian Rhapsody" data-artist="Queen">
+                            <span class="song">Bohemian Rhapsody</span>
+                            <span class="artist">Queen</span>
+                        </button>
+                        <button class="example-btn" data-song="Levitating" data-artist="Dua Lipa">
+                            <span class="song">Levitating</span>
+                            <span class="artist">Dua Lipa</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="input-song-card">
+                    <div class="song-header">
+                        <h2><i class="fas fa-volume-up"></i> Your Song</h2>
+                        <span class="edit-btn" id="editBtn"><i class="fas fa-edit"></i> Edit</span>
+                    </div>
+                    <div class="song-info" id="inputSongInfo">
+                        <div class="empty-state">
+                            <i class="fas fa-music"></i>
+                            <p>Enter a song above to see recommendations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendations-section">
+                    <div class="recommendations-header">
+                        <h2><i class="fas fa-star"></i> Similar Recommendations</h2>
+                        <div class="results-count">
+                            <span id="resultsCount">0</span> songs found
+                        </div>
+                    </div>
+                    
+                    <!-- Webhook Status Indicator -->
+                    <div class="webhook-status" id="webhookStatus" style="display: none;">
+                        <div class="status-content">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Getting recommendations from AI...</span>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendations-container" id="recommendations">
+                        <div class="empty-state">
+                            <i class="fas fa-headphones-alt"></i>
+                            <p>Your recommendations will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Songs Like X &copy; 2025 | Powered by AI Recommendations</p>
+            <p class="disclaimer">Note: Recommendations are generated by AI based on your input.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
