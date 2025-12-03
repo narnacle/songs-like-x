@@ -2,7 +2,7 @@
 
 A modern, AI-powered web application that recommends similar songs based on user input. The app sends search queries to a webhook and displays AI-generated recommendations with YouTube integration.
 
-![Songs Like X Screenshot](800x450.png?text=Songs+Like+X+Music+Recommendation+App)
+![Songs Like X Screenshot](1680x1197.png?text=Songs+Like+X+Music+Recommendation+App)
 
 ## 🌟 Features
 
